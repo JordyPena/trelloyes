@@ -11,7 +11,8 @@ function List(props) {
         </h2>
       </header>
       <div className="List-cards">
-        {props.cards.map(card => <Card title={card.title} content={card.content}/>)}
+        {props.cards.map((card, ndx) => <Card key={card.id} currentList={props.currentList} title={card.title} content={card.content} listener={props.listener} index={ndx}/>)}
+        <button onClick={() => {props.newCard(props.currentList)}}>Add new card</button>
       </div>
     </section>
   )

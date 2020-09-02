@@ -11,9 +11,12 @@ function Card(props) {
       <p>
         {props.content}
       </p>
+      <button onClick={() => props.listener(props.index, props.currentList)}>Delete</button>
     </div>
   ) 
     
 }
 
 export default Card;
+
+
